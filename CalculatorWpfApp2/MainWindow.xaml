@@ -1,0 +1,63 @@
+﻿<Window x:Class="CalculatorWpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorWpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox Name="expressionTextBox" IsReadOnly="True" Margin="2, 0, 2, 2" Foreground="Gray" TextAlignment="Right"></TextBox>
+            <TextBox Name="resultTextBox" Grid.Row="1" IsReadOnly="True" Margin="2, 0, 2, 2" FontSize="30" FontWeight="Bold" TextAlignment="Right"></TextBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                
+            </Grid.ColumnDefinitions>
+
+            <Button Name="CEButton" Grid.Row="0" Grid.Column="0" FontSize="35" FontWeight="Bold" Margin="1" Click="CEButton_Click">CE</Button>
+            <Button Name="CButton" Grid.Row="0" Grid.Column="1" FontSize="35" FontWeight="Bold" Margin="1" Click="CButton_Click">C</Button>
+            <Button Name="RemoveLastSymbButton"  Grid.Row="0" Grid.Column="2" FontSize="35" FontWeight="Bold" Margin="1" Click="RemoveLastSymbButton_Click">&lt;</Button>
+            <Button Name="DivisionButton" Grid.Row="0" Grid.Column="3" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">/</Button>
+
+            <Button Name="SevenButton" Grid.Row="1" Grid.Column="0" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">7</Button>
+            <Button Name="EightButton" Grid.Row="1" Grid.Column="1" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">8</Button>
+            <Button Name="NineButton" Grid.Row="1" Grid.Column="2" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">9</Button>
+            <Button Name="MultiplicationButton" Grid.Row="1" Grid.Column="3" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">*</Button>
+
+            <Button Name="FourButton" Grid.Row="2" Grid.Column="0" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">4</Button>
+            <Button Name="FiveButton" Grid.Row="2" Grid.Column="1" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">5</Button>
+            <Button Name="SixButton" Grid.Row="2" Grid.Column="2" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">6</Button>
+            <Button Name="SubtractionButton" Grid.Row="2" Grid.Column="3" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">-</Button>
+
+            <Button Name="OneButton" Grid.Row="3" Grid.Column="0" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">1</Button>
+            <Button Name="TwoButton" Grid.Row="3" Grid.Column="1" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">2</Button>
+            <Button Name="ThreeButton" Grid.Row="3" Grid.Column="2" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">3</Button>
+            <Button Name="AdditionButton" Grid.Row="3" Grid.Column="3" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">+</Button>
+
+            <Button Name="DotButton" Grid.Row="4" Grid.Column="0" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">.</Button>
+            <Button Name="ZeroButton" Grid.Row="4" Grid.Column="1" FontSize="35" FontWeight="Bold" Margin="1" Click="NumpadButton_Click">0</Button>
+            <Button Name="ResultButton" Grid.Row="4" Grid.Column="2" FontSize="35" FontWeight="Bold" Grid.ColumnSpan="2" Margin="1" Click="ResultButton_Click">=</Button>
+        </Grid>
+    </Grid>
+</Window>
